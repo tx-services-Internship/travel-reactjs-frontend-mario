@@ -1,6 +1,6 @@
-Student internship Travel Application project reactjs frontend repository
+# Travel react frontend Mario
 
-# Getting Started with Create React App
+Student internship Travel Application project reactjs frontend repository
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
