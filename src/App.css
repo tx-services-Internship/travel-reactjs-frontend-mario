@@ -3,12 +3,52 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-
 .view {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+}
+
+.Navbar{
+  float: left;
+}
+
+.NavRight{
+  float: right;
+  display: flex;
+}
+
+ul {
+  background: #06da91;
+  font-family: 'Source Sans Pro', sans-serif;
+  height: 2.3rem;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem calc((100vw - 1000px) / 2);
+  padding-bottom: 0.5rem;
+  z-index: 12;
+}
+
+li {
+  cursor: pointer;
+  color: #ffffff;
+  align-items: center;
+  display: flex;
+}
+
+a:link {
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .login-form{

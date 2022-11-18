@@ -4,7 +4,7 @@ import Home from "./pages/home";
 import SignInPage from "./pages/signin";
 import Register from "./pages/register";
 import Forma from "./pages/forma";
-import Navbar from './components/index';
+import Navbar from './components/navbar';
 import './App.css';
 
 function App() {
