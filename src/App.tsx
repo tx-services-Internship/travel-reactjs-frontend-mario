@@ -1,11 +1,10 @@
-import React from 'react';
-import Header from './components/Header/Header';
-import Forma from './pages/Forma';
+import React from "react";
+import Form from "./pages/Form";
 
 function App() {
   return (
     <div className="App">
-      <Forma />
+      <Form />
     </div>
   );
 }
