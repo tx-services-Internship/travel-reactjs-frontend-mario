@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './navbar.css';
 
 const Navbar = () => {
 	return (
@@ -25,27 +26,5 @@ const Navbar = () => {
 	  </div>
 	);
   };
-
-
-// {
-// return (
-// 	<>
-// 	<Nav>
-// 		<Bars />
-// 		<NavMenu>
-// 		<NavLink to='/signin' >
-// 			Sign In
-// 		</NavLink>
-// 		<NavLink to='/register' >
-// 			Register
-// 		</NavLink>
-// 		</NavMenu>
-// 		<NavBtn>
-// 		<NavBtnLink to='/home'>Home Page</NavBtnLink>
-// 		</NavBtn>
-// 	</Nav>
-// 	</>
-// );
-// };
 
 export default Navbar;

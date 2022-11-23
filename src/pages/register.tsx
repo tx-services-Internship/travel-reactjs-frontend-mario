@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import Button from '../components/buttonComponent/buttonComponent';
+import Input from '../components/inputComponent/inputComponent';
+import View from '../components/viewComponent/viewComponent';
+
 
 export const Register = () => {
   const [name, setName] = useState('');
@@ -9,14 +14,16 @@ export const Register = () => {
     e.preventDefault();
   };
 
+  const navigate = useNavigate();
+
   return (
-	<div className="view">
+    <View>
 	<h1>Register</h1>
     <form onSubmit={submit} className="login-form">
 
 	  <label className='label' htmlFor="name">Name</label>
 
-      <input
+      <Input
         type="text" className='input'
         placeholder="Your name"
         name="name"
@@ -26,7 +33,7 @@ export const Register = () => {
 
       <label className='label' htmlFor="email">Email</label>
 
-      <input className='input'
+      <Input className='input'
         type="email"
         placeholder="Email"
         name="email"
@@ -36,7 +43,7 @@ export const Register = () => {
 
       <label className='label' htmlFor="password">Password</label>
 
-      <input className='input'
+      <Input className='input'
         type="password"
         placeholder="Password"
         name="password"
@@ -44,10 +51,10 @@ export const Register = () => {
         onChange={e => setPassword(e.target.value)}
       />
 
-      <button className="btn" type="submit">Sign Up</button>
-
+<Button className="base signupScreen"
+    onClick={() => navigate('/signin')}>Register</Button>
     </form>
-	</div>
+	</View>
   );
 };
 

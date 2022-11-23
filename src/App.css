@@ -3,52 +3,40 @@
   font-family: 'Source Sans Pro', sans-serif;
 }
 
-.view {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.Navbar{
-  float: left;
-}
-
-.NavRight{
-  float: right;
-  display: flex;
-}
-
-ul {
-  background: #06da91;
-  font-family: 'Source Sans Pro', sans-serif;
-  height: 2.3rem;
-  font-size: 1em;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.2rem calc((100vw - 1000px) / 2);
-  padding-bottom: 0.5rem;
-  z-index: 12;
-}
-
-li {
-  cursor: pointer;
-  color: #ffffff;
-  align-items: center;
-  display: flex;
-}
-
-a:link {
-  color: #ffffff;
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
+body, html {
   height: 100%;
-  cursor: pointer;
-  text-decoration: none;
+  color: white;
+} 
+
+.backGround {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background.jpeg);  
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.logo {
+  max-width: 100%;
+  position: absolute; 
+  top: 3.3rem; 
+  right: 0px; 
+  z-index: 100; 
+}
+
+h1{
+  position: absolute;
+  font-family: 'Source Sans Pro', sans-serif;
+  top: 3.3rem;
+  font-size: 3rem;
+  font-weight: 800;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+@media screen and (max-width: 800px) {
+  h1 {
+    font-size: 5vw;
+  }
 }
 
 .login-form{
@@ -66,53 +54,6 @@ a:link {
 .label{
   color: black;
   font-size: 1rem;
-}
-
-.input{
-  width: 100%;
-  padding: 0.3rem 0.9rem;
-  margin: 0.5rem 0;
-  display: inline-block;
-  border: 1px solid black;
-  border-radius: 2px;
-  box-sizing: border-box;
-}
-
-body, html {
-  height: 100%;
-  color: white;
-} 
-
-.bg {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(images/background.jpeg);  
-  height: 100%;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-
-h1{
-  position: absolute;
-  font-family: 'Source Sans Pro', sans-serif;
-  top: 3.3rem;
-  font-size: 3rem;
-  font-weight: 800;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-
-@media screen and (max-width: 800px) {
-  h1 {
-    font-size: 5vw;
-  }
-}
-
-.logo {
-  max-width: 100%;
-  position: absolute; 
-  top: 3.3rem; 
-  right: 0%; 
-  z-index: 100; 
 }
 
 .App-logo {
@@ -148,45 +89,4 @@ h1{
   to {
     transform: rotate(360deg);
   }
-}
-
-.button {
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: #06da91;
-  border: 1px solid white;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: white;
-  cursor: pointer;
-  top: 50%;
-  text-align: center;
-  transition: all 0.2s ease-in-out;
-  width: 5em;
-  font-size: 1.5em;
-  padding: 0.3rem 0.9rem;
-  white-space: nowrap;
-}
-
-.button:hover {
-  background-color: #808080;
-}
-
-.btn {
-  font-family: 'Source Sans Pro', sans-serif;
-  background-color: #ffffff;
-  border: 1px solid black;
-  border-radius: 8px;
-  box-sizing: border-box;
-  color: black;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-  font-size: 1rem;
-  padding: 0.3rem 0.9rem;
-  margin-top: 2%;
-  text-align: center;
-  white-space: nowrap;
-}
-
-.btn:hover {
-  background-color: #808080;
 }

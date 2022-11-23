@@ -1,4 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from "react-router-dom";
+import Button from '../components/buttonComponent/buttonComponent';
+import View from '../components/viewComponent/viewComponent';
+import Input from '../components/inputComponent/inputComponent';
+
 
 export const SignInPage = () => {
   const [email, setEmail] = useState('');
@@ -8,13 +13,15 @@ export const SignInPage = () => {
     e.preventDefault();
   };
 
+  const navigate = useNavigate();
+
   return (
-	<div className="view">
+    <View>
 	<h1>Sign In</h1>
     <form onSubmit={submit} className="login-form">
       <label className='label' htmlFor="email">Email</label>
 
-      <input className='input'
+      <Input className='input'
         type="email"
         placeholder="Email"
         name="email"
@@ -24,7 +31,7 @@ export const SignInPage = () => {
 
       <label className='label' htmlFor="password">Password</label>
 
-      <input className='input'
+      <Input className='input'
         type="password"
         placeholder="Password"
         name="password"
@@ -32,9 +39,10 @@ export const SignInPage = () => {
         onChange={e => setPassword(e.target.value)}
       />
 
-      <button className="btn" type="submit">Sign In</button>
+<Button className='base signupScreen'
+    onClick={() => navigate('/home')}>Sign In</Button>
     </form>
-	</div>
+	</View>
   );
 };
 

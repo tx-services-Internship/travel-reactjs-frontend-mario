@@ -1,20 +1,22 @@
 import React from 'react';
 import { useNavigate } from "react-router-dom";
+import Button from '../components/buttonComponent/buttonComponent';
+import View from '../components/viewComponent/viewComponent';
 
 const Home = () => {
-
 	const navigate = useNavigate();
-
-return (
-	<div className="view">
+	const buttonStyles = ['homeScreen', 'formScreen', 'signupScreen']
+	return (
+	<View>
 		<h1>TX Services Travel Guide</h1>
 		<div className='logo'>
-		<a href="https://jobs.txservices.rs/"><img alt='logo' src="./logo.png" height={'35rem'} width={'70rem'}/></a>
+		<a href="https://jobs.txservices.rs/"><img alt='logo' src="./logo.png" height={'30rem'} width={'60rem'}/></a>
 		</div>
-        <button className="button" onClick={() => navigate("/forma")}>Form</button>
-	</div>
+        <Button className={`base ${buttonStyles[0]}`}
+		onClick={() => navigate('/form')}>Form</Button>
+	</View>
 
-);
+)
 };
 
 

@@ -1,0 +1,41 @@
+.base{
+  font-family: "Source Sans Pro";
+  border-radius: 8px;
+  box-sizing: border-box;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  text-align: center;
+}
+
+.homeScreen {
+  background-color: #06da91;
+  border: 1px solid white;
+  box-sizing: border-box;
+  color: white;
+  top: 50%;
+  width: 5em;
+  font-size: 1.5em;
+  padding: 0.3rem 0.9rem;
+}
+
+.formScreen {
+  background-color: #06da91;
+  border: 1px solid white;
+  color: white;
+  top: 0;
+  right: 0;
+  position: absolute;
+  margin-top: 3.5em;
+  margin-right: 0.5em;
+  width: 3em;
+  font-size: 1em;
+}
+
+.signupScreen {
+  background-color: #ffffff;
+  border: 1px solid black;
+  color: black;
+  margin-top: 2%;
+  padding: 0.3rem 0.9rem;
+  font-size: 1em;
+}
