@@ -1,34 +1,19 @@
 import React from "react";
+import "./viewStyle.css";
 
 interface Props {
   children?: React.ReactNode;
-  style?: React.CSSProperties;
-  display?: string;
-  justifyContent?: string;
-  alignItems?: string;
-  height?: string;
+  className?: string;
 }
 
-const View: React.FC<Props> = ({
-  children,
-  style,
-  display,
-  justifyContent,
-  alignItems,
-  height
-}) => {
+const View: React.FC<Props> = (props) => {
   return (
     <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        height: '100vh'
-      }}
+      className={`${props.className}`}
     >
-      {children}
+      {props.children}
     </div>
   );
-}
+};
 
 export default View;

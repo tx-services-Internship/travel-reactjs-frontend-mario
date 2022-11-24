@@ -1,21 +1,21 @@
 import React from "react";
-import './buttonStyles.css';
+import "./buttonStyles.css";
 
 interface Props {
   children?: React.ReactNode;
   onClick: () => void;
-  className: string;
+  variant?: "homeScreen" | "formScreen" | "signupScreen";
 }
 
-const Button: React.FC<Props> = (props) => {
+const Button: React.FC<Props> = ({
+  variant,
+  children,
+  onClick,
+}) => {
   return (
-    <button
-    className={`${props.className}`}
-      onClick={props.onClick}
-    >
-      {props.children}
+    <button className={`base ${variant}`} onClick={onClick}>
+      {children}
     </button>
   );
-}
-
+};
 export default Button;

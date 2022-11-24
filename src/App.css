@@ -51,11 +51,6 @@ h1{
   font-size: 1em;
 }
 
-.label{
-  color: black;
-  font-size: 1rem;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
