@@ -12,11 +12,7 @@ import {
 import Button from "../Button/Button";
 import "./FormComponent.css";
 
-interface Props {
-  children?: React.ReactNode;
-}
-
-const FormComponent: React.FC<Props> = ({ children }) => {
+const FormComponent = () => {
   const numbers = Array.from({ length: 31 }, (_, i) => i + 1);
 
   return (
@@ -296,7 +292,7 @@ const FormComponent: React.FC<Props> = ({ children }) => {
             </Grid>
           </Grid>
         </Grid>
-        <Button />
+        <Button>Submit</Button>
       </form>
     </div>
   );

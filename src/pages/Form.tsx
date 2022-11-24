@@ -4,7 +4,7 @@ import "./Form.css";
 
 const Form = () => {
   return (
-    <div className="Forma">
+    <div className="Form">
       <h1 style={{ color: "white" }}>Forma</h1>
       <FormComponent />
     </div>

@@ -34,7 +34,7 @@ const ColorButton = styled(Button)(({ theme }) => ({
 const ButtonComponent: React.FC<Props> = ({ children }) => {
   return (
     <div>
-      <ColorButton>Submit</ColorButton>
+      <ColorButton>{children}</ColorButton>
     </div>
   );
 };
