@@ -16,11 +16,11 @@ export const Register = () => {
   const navigate = useNavigate();
 
   return (
-    <View className="viewComponent">
+    <View>
       <h1>Register</h1>
       <form onSubmit={submit} className="login-form">
-        Name:
         <Input
+          label="Name:"
           type="text"
           className="input"
           placeholder="Your name"
@@ -28,8 +28,8 @@ export const Register = () => {
           required
           onChange={(e) => setName(e.target.value)}
         />
-        Email:
         <Input
+          label="Email:"
           className="input"
           type="email"
           placeholder="Email"
@@ -37,8 +37,8 @@ export const Register = () => {
           required
           onChange={(e) => setEmail(e.target.value)}
         />
-        Password:
         <Input
+          label="Password:"
           className="input"
           type="password"
           placeholder="Password"

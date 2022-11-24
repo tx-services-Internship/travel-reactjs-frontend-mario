@@ -9,7 +9,7 @@ interface Props {
 const View: React.FC<Props> = (props) => {
   return (
     <div
-      className={`${props.className}`}
+      className="viewComponent"
     >
       {props.children}
     </div>

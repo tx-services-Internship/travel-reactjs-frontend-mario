@@ -7,15 +7,16 @@ interface Props {
   className?: string;
   placeholder?: string;
   name?: string;
+  label?: string;
   htmlFor?: string;
   required?: boolean | StringConstructor;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input: React.FC<Props> = (props, htmlFor) => {
+const Input: React.FC<Props> = (props) => {
   return (
     <>
-      <label htmlFor={`${props.name}`}></label>
+      <label htmlFor={`${props.name}`}>{props.label}</label>
       <input
         type={`${props.type}`}
         className={`${props.className}`}

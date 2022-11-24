@@ -7,7 +7,7 @@ const Form = () => {
   const navigate = useNavigate();
 
   return (
-    <View className="viewComponent">
+    <View>
       <h1>Fill in the Form</h1>
       <Button variant="formScreen" onClick={() => navigate(-1)}>
         Back

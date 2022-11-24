@@ -15,11 +15,11 @@ export const SignInPage = () => {
   const navigate = useNavigate();
 
   return (
-    <View className="viewComponent">
+    <View>
       <h1>Sign In</h1>
       <form onSubmit={submit} className="login-form">
-        Email:
         <Input
+          label="Email:"
           className="input"
           type="email"
           placeholder="Email"
@@ -27,8 +27,8 @@ export const SignInPage = () => {
           required
           onChange={(e) => setEmail(e.target.value)}
         />
-        Password:
         <Input
+          label="Password:"
           className="input"
           type="password"
           placeholder="Password"
