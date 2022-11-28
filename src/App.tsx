@@ -12,10 +12,10 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
-          <Route path="/home" element={<Home />} />
-          <Route path="/signin" element={<SignInPage />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/form" element={<Form />} />
+          <Route path="/Home" element={<Home />} />
+          <Route path="/Signin" element={<SignInPage />} />
+          <Route path="/Register" element={<Register />} />
+          <Route path="/Form" element={<Form />} />
         </Routes>
       </BrowserRouter>
     </div>
