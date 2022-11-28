@@ -1,4 +1,4 @@
-import React from "react";
+import React, { SyntheticEvent, useState } from "react";
 import {
   Grid,
   TextField,
@@ -13,11 +13,45 @@ import Button from "../Button/Button";
 import "./FormComponent.css";
 
 const FormComponent = () => {
-  const numbers = Array.from({ length: 31 }, (_, i) => i + 1);
+  const [data, setData] = useState({
+    nameAndSurname: "",
+    department: "",
+    passportNo: "",
+    idNo: "",
+    departureDate: "",
+    departureTime: "",
+    tripEndDate: "",
+    tripEndTime: "",
+    arrivalDate: "",
+    countryAndPlace: "",
+    accomodation: "",
+    breakfast: "",
+    lunch: "",
+    dinner: "",
+    transport: "",
+    regNumber: "",
+    travelPurpose: "",
+  });
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+  };
+
+  const handleChange = (e: any) => {
+    setData({
+      ...data,
+      nameAndSurname: e.target.value,
+      department: e.target.value,
+      passportNo: e.target.value,
+      idNo: e.target.value,
+    });
+  };
+
+  const numbers = Array.from({ length: 31 }, (_, i) => i + 1);
+  console.log(data.nameAndSurname, data.department, data.passportNo, data.idNo);
   return (
     <div className="Form">
-      <form>
+      <form onSubmit={handleSubmit}>
         <Grid container style={{ marginLeft: "10%", width: "80%" }}>
           <Grid
             className="form-group responsive"
@@ -38,7 +72,10 @@ const FormComponent = () => {
                 type="text"
                 variant="outlined"
                 label="Name and surname / Ime i prezime"
+                name="nameAndSurname"
                 style={{ width: "50%", marginLeft: "200px" }}
+                value={data.nameAndSurname}
+                onChange={(e) => handleChange(e)}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={6}>
@@ -48,7 +85,10 @@ const FormComponent = () => {
                 type="text"
                 variant="outlined"
                 label="Department / Odeljenje"
+                name="department"
                 style={{ width: "50%", marginRight: "200px" }}
+                value={data.department}
+                onChange={(e) => handleChange(e)}
               />
             </Grid>
 
@@ -59,7 +99,10 @@ const FormComponent = () => {
                 type="number"
                 variant="outlined"
                 label="Passport No. / Broj pasosa"
+                name="passportNo"
                 style={{ width: "50%", marginLeft: "200px" }}
+                value={data.passportNo}
+                onChange={(e) => handleChange(e)}
               />
             </Grid>
             <Grid item xs={12} sm={6} md={6}>
@@ -69,7 +112,10 @@ const FormComponent = () => {
                 type="text"
                 variant="outlined"
                 label="ID No. / Broj licne karte"
+                name="idNo"
                 style={{ width: "50%", marginRight: "200px" }}
+                value={data.idNo}
+                onChange={(e) => handleChange(e)}
               />
             </Grid>
           </Grid>
@@ -164,8 +210,10 @@ const FormComponent = () => {
               >
                 <InputLabel>Type of Accomodation / Vrsta smestaja:</InputLabel>
                 <Select>
-                  <MenuItem value={1}>Hotel</MenuItem>
-                  <MenuItem value={2}>Private Accomodation</MenuItem>
+                  <MenuItem value={"Hotel"}>Hotel</MenuItem>
+                  <MenuItem value={"Private Accomodation"}>
+                    Private Accomodation
+                  </MenuItem>
                 </Select>
               </FormControl>
             </Grid>
@@ -255,8 +303,8 @@ const FormComponent = () => {
               >
                 <InputLabel>Type of transport / Nacin transporta:</InputLabel>
                 <Select>
-                  <MenuItem value={1}>Airplane</MenuItem>
-                  <MenuItem value={2}>Car</MenuItem>
+                  <MenuItem value={"Airplane"}>Airplane</MenuItem>
+                  <MenuItem value={"Car"}>Car</MenuItem>
                 </Select>
               </FormControl>
             </Grid>
@@ -279,7 +327,7 @@ const FormComponent = () => {
             spacing={1}
             columnSpacing={{ xs: 1, sm: 1, md: 1 }}
           >
-            <Grid item xs={12} sm={12} md={12} direction="row">
+            <Grid item xs={12} sm={12} md={12}>
               <InputLabel className="blackColor" style={{ fontSize: "20px" }}>
                 Purpose of Travel / Namena sluzbenog putovanja:
               </InputLabel>
@@ -292,7 +340,7 @@ const FormComponent = () => {
             </Grid>
           </Grid>
         </Grid>
-        <Button>Submit</Button>
+        <Button onClick={() => console.log("clicked")}>Submit</Button>
       </form>
     </div>
   );

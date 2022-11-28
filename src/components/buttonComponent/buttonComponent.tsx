@@ -1,17 +1,13 @@
 import React from "react";
-import "./buttonStyles.css";
+import "./ButtonStyles.css";
 
 interface Props {
   children?: React.ReactNode;
   onClick: () => void;
-  variant?: "homeScreen" | "formScreen" | "signupScreen";
+  variant?: "homeScreen" | "signupScreen";
 }
 
-const Button: React.FC<Props> = ({
-  variant,
-  children,
-  onClick,
-}) => {
+const Button: React.FC<Props> = ({ variant, children, onClick }) => {
   return (
     <button className={`base ${variant}`} onClick={onClick}>
       {children}

@@ -18,19 +18,6 @@
   padding: 0.3rem 0.9rem;
 }
 
-.formScreen {
-  background-color: #06da91;
-  border: 1px solid white;
-  color: white;
-  top: 0;
-  right: 0;
-  position: absolute;
-  margin-top: 3.5em;
-  margin-right: 0.5em;
-  width: 3em;
-  font-size: 1em;
-}
-
 .signupScreen {
   background-color: #ffffff;
   border: 1px solid black;

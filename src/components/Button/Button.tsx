@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 
 interface Props {
   children?: React.ReactNode;
+  onClick: any & Props;
 }
 
 const ColorButton = styled(Button)(({ theme }) => ({
@@ -31,10 +32,10 @@ const ColorButton = styled(Button)(({ theme }) => ({
   },
 }));
 
-const ButtonComponent: React.FC<Props> = ({ children }) => {
+const ButtonComponent: React.FC<Props> = ({ children, onClick }) => {
   return (
     <div>
-      <ColorButton>{children}</ColorButton>
+      <ColorButton onClick={onClick}>{children}</ColorButton>
     </div>
   );
 };

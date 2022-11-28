@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../components/buttonComponent/buttonComponent";
-import View from "../components/viewComponent/viewComponent";
-import Input from "../components/inputComponent/inputComponent";
+import Button from "../components/ButtonComponent/ButtonComponent";
+import View from "../components/ViewComponent/ViewComponent";
+import Input from "../components/InputComponent/InputComponent";
 
 export const SignInPage = () => {
   const [email, setEmail] = useState("");
