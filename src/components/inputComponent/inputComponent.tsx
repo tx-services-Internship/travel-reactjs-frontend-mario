@@ -1,5 +1,5 @@
 import React, { ChangeEvent } from "react";
-import "./inputStyles.css";
+import "./InputStyles.css";
 
 interface Props {
   children?: React.ReactNode;
