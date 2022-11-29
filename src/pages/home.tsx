@@ -7,7 +7,7 @@ import "../App.css";
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <View className="backGround">
+    <View>
       <h1>TX Services Travel Guide</h1>
       <div className="logo">
         <a href="https://jobs.txservices.rs/">

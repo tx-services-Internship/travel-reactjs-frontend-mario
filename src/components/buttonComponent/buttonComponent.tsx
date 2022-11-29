@@ -4,7 +4,7 @@ import "./ButtonStyles.css";
 interface Props {
   children?: React.ReactNode;
   onClick: () => void;
-  variant?: "homeScreen" | "signupScreen";
+  variant?: "homeScreen" | "signupScreen" | "formScreen";
 }
 
 const Button: React.FC<Props> = ({ variant, children, onClick }) => {

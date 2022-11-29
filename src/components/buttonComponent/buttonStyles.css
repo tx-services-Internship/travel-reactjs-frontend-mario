@@ -26,3 +26,15 @@
   padding: 0.3rem 0.9rem;
   font-size: 1em;
 }
+
+.formScreen {
+  background-color: #06da91;
+  border: 1px solid white;
+  box-sizing: border-box;
+  color: white;
+  top: 50%;
+  width: 5em;
+  font-size: 1.5em;
+  padding: 0.3rem 0.9rem;
+  margin-bottom: 2%;
+}
