@@ -1,6 +1,6 @@
 import React from "react";
-import View from "../components/viewComponent/viewComponent";
-import TableComponent from "../components/table/Table";
+import View from "../components/ViewComponent/ViewComponent";
+import TableComponent from "../components/Table/Table";
 const FilledForms = () => {
   return (
     <div>

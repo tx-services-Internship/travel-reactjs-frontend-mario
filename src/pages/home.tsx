@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../components/buttonComponent/buttonComponent";
-import View from "../components/viewComponent/viewComponent";
+import Button from "../components/ButtonComponent/ButtonComponent";
+import View from "../components/ViewComponent/ViewComponent";
 import "../App.css";
 
 const Home = () => {
@@ -19,7 +19,7 @@ const Home = () => {
           display: "flex",
           justifyContent: "space-evenly",
           flexWrap: "wrap",
-          width: "20%",
+          width: "20em",
           gap: "1em",
         }}
       >

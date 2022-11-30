@@ -32,6 +32,7 @@ const TableComponent = () => {
   const [items, setItems] = useState<Items>();
 
   useEffect(() => {
+    if(localStorage.getItem("formData"))
     setItems(JSON.parse(localStorage.getItem("formData") || ""));
   }, []);
 
