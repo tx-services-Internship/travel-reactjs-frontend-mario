@@ -1,5 +1,5 @@
 import React from "react";
-import "./ViewStyle.css";
+import "./viewStyle.css";
 
 interface Props {
   children?: React.ReactNode;
