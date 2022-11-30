@@ -17,8 +17,10 @@ const Home = () => {
       <div
         style={{
           display: "flex",
-          justifyContent: "space-between",
-          width: "15%",
+          justifyContent: "space-evenly",
+          flexWrap: "wrap",
+          width: "20%",
+          gap: "1em",
         }}
       >
         <Button variant="homeScreen" onClick={() => navigate("/form")}>
