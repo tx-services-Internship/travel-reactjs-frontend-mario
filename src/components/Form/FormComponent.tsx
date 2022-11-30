@@ -59,13 +59,13 @@ const FormComponent = () => {
           spacing={2}
           columnSpacing={{ xs: 1, sm: 2, md: 2 }}
           container
-          style={{ marginBottom: "2em", marginTop: "1em" }}
+          style={{ marginTop: "2em" }}
         >
           <Grid item xs={12} sm={12} md={12}>
             <Typography
               className="blackColor"
               variant="h5"
-              style={{ marginTop: "0%", marginBottom: "0%" }}
+              style={{ marginTop: "0em", marginBottom: "0em" }}
             >
               Personal data:
             </Typography>
@@ -126,13 +126,13 @@ const FormComponent = () => {
           spacing={2}
           container
           columnSpacing={{ xs: 1, sm: 2, md: 2 }}
-          style={{ marginBottom: "2em" }}
+          style={{ marginTop: "0.5em" }}
         >
           <Grid item xs={12} sm={12} md={12}>
             <Typography
               variant="h5"
               className="blackColor whiteBold responsive"
-              style={{ marginTop: "0%", marginBottom: "0%" }}
+              style={{ marginTop: "0em", marginBottom: "0em" }}
             >
               Travel info:
             </Typography>
@@ -238,20 +238,19 @@ const FormComponent = () => {
           container
           spacing={2}
           columnSpacing={{ xs: 1, sm: 2, md: 2 }}
-          style={{ marginBottom: "2em" }}
+          style={{ marginTop: "0.5em" }}
         >
           <Grid
-            className="form-groupresponsive"
             item
             xs={12}
             sm={12}
             md={12}
-            style={{ marginTop: "2em", marginBottom: "2em" }}
+            style={{ marginTop: "0em", marginBottom: "0em" }}
           >
             <Typography
               variant="h5"
               className="blackColor"
-              style={{ marginTop: "0%", marginBottom: "0%" }}
+              style={{ marginTop: "0em", marginBottom: "0em" }}
             >
               Number of meals provided during business trip / Broj obroka
               obezbedjenih tokom trajanja sluzbenog putovanja:
@@ -309,13 +308,13 @@ const FormComponent = () => {
           container
           spacing={2}
           columnSpacing={{ xs: 1, sm: 2, md: 2 }}
-          style={{ marginBottom: "2em" }}
+          style={{ marginTop: "0.5em" }}
         >
           <Grid className="responsive" item xs={12} sm={12} md={12}>
             <Typography
               className="blackColor"
               variant="h5"
-              style={{ marginTop: "0%", marginBottom: "0%" }}
+              style={{ marginTop: "0em", marginBottom: "0em" }}
             >
               Transport details:
             </Typography>
@@ -352,16 +351,23 @@ const FormComponent = () => {
           container
           spacing={2}
           columnSpacing={{ xs: 1, sm: 2, md: 2 }}
-          style={{ marginBottom: "2em" }}
+          style={{ marginTop: "0.5em", marginBottom: "1em" }}
         >
           <Grid item xs={12} sm={12} md={12}>
-            <InputLabel className="blackColor" style={{ fontSize: "1em" }}>
-              Purpose of Travel / Namena sluzbenog putovanja:
-            </InputLabel>
+            <Typography
+              variant="h5"
+              className="blackColor"
+              style={{ marginTop: "0em", marginBottom: "0.5em" }}
+            >
+              Purpose of Travel:
+            </Typography>
             <TextareaAutosize
               minRows={5}
               placeholder="Purpose of travel"
-              style={{ width: "35em" }}
+              style={{
+                width: "35em",
+                fontFamily: "Source Sans Pro, sans-serif",
+              }}
               className="responsive"
               name="purposeTravel"
               onChange={handleChange}

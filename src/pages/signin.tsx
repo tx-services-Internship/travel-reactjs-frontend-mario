@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Button from "../components/ButtonComponent/ButtonComponent";
-import View from "../components/ViewComponent/ViewComponent";
-import Input from "../components/InputComponent/InputComponent";
+import Button from "../components/buttonComponent/buttonComponent";
+import View from "../components/viewComponent/viewComponent";
+import Input from "../components/inputComponent/inputComponent";
 
 export const SignInPage = () => {
   const [data, setData] = useState({
@@ -12,7 +12,7 @@ export const SignInPage = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     console.log(data);
-    alert('Korisnik se ulogovao!');
+    alert("Korisnik se ulogovao!");
     localStorage.setItem("data", JSON.stringify(data));
   };
 
@@ -35,7 +35,8 @@ export const SignInPage = () => {
           placeholder="Email"
           name="email"
           required
-          onChange={handleChange}        />
+          onChange={handleChange}
+        />
         <Input
           label="Password:"
           className="input"
@@ -43,7 +44,8 @@ export const SignInPage = () => {
           placeholder="Password"
           name="password"
           required
-          onChange={handleChange}        />
+          onChange={handleChange}
+        />
         <Button variant="signupScreen" onClick={() => console.log("clicked")}>
           Sign In
         </Button>

@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/home";
 import SignInPage from "./pages/signin";
 import Register from "./pages/register";
-import Form from "./pages/form";
+import Form from "./pages/Form";
 import Navbar from "./components/navbarComponent/navbar";
 import FilledForms from "./pages/filledForms";
 
