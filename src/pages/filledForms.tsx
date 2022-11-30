@@ -1,5 +1,5 @@
 import React from "react";
-import View from "../components/viewComponent/viewComponent";
+import View from "../components/ViewComponent/ViewComponent";
 import TableComponent from "../components/table/Table";
 const FilledForms = () => {
   return (

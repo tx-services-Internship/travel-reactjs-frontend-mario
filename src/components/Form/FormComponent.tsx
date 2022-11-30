@@ -9,7 +9,7 @@ import {
   FormControl,
   TextareaAutosize,
 } from "@mui/material";
-import Button from "../buttonComponent/buttonComponent";
+import Button from "../ButtonComponent/ButtonComponent";
 import "./FormComponent.css";
 
 const FormComponent = () => {
