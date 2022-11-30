@@ -1,23 +1,33 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Button from "../components/ButtonComponent/ButtonComponent";
 import View from "../components/ViewComponent/ViewComponent";
 import Input from "../components/InputComponent/InputComponent";
 
 export const SignInPage = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [data, setData] = useState({
+    email: "",
+    password: "",
+  });
 
-  const submit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log(data);
+    alert('Korisnik se ulogovao!');
+    localStorage.setItem("data", JSON.stringify(data));
   };
 
-  const navigate = useNavigate();
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+
+    setData((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
 
   return (
     <View>
       <h1>Sign In</h1>
-      <form onSubmit={submit} className="login-form">
+      <form onSubmit={handleSubmit} className="login-form">
         <Input
           label="Email:"
           className="input"
@@ -25,8 +35,7 @@ export const SignInPage = () => {
           placeholder="Email"
           name="email"
           required
-          onChange={(e) => setEmail(e.target.value)}
-        />
+          onChange={handleChange}        />
         <Input
           label="Password:"
           className="input"
@@ -34,9 +43,8 @@ export const SignInPage = () => {
           placeholder="Password"
           name="password"
           required
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <Button variant="signupScreen" onClick={() => navigate("/home")}>
+          onChange={handleChange}        />
+        <Button variant="signupScreen" onClick={() => console.log("clicked")}>
           Sign In
         </Button>
       </form>

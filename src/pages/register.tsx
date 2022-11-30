@@ -1,24 +1,34 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import Button from "../components/ButtonComponent/ButtonComponent";
 import Input from "../components/InputComponent/InputComponent";
 import View from "../components/ViewComponent/ViewComponent";
 
 export const Register = () => {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+  const [data, setData] = useState({
+    name: "",
+    email: "",
+    password: "",
+  });
 
-  const submit = (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    console.log(data);
+    alert('Korisnik je prijavljen!');
+    localStorage.setItem("data", JSON.stringify(data));
   };
 
-  const navigate = useNavigate();
+  const handleChange = (e: any) => {
+    const { name, value } = e.target;
+
+    setData((prev) => {
+      return { ...prev, [name]: value };
+    });
+  };
 
   return (
     <View>
       <h1>Register</h1>
-      <form onSubmit={submit} className="login-form">
+      <form onSubmit={handleSubmit} className="login-form">
         <Input
           label="Name:"
           type="text"
@@ -26,7 +36,7 @@ export const Register = () => {
           placeholder="Your name"
           name="name"
           required
-          onChange={(e) => setName(e.target.value)}
+          onChange={handleChange}
         />
         <Input
           label="Email:"
@@ -35,7 +45,7 @@ export const Register = () => {
           placeholder="Email"
           name="email"
           required
-          onChange={(e) => setEmail(e.target.value)}
+          onChange={handleChange}
         />
         <Input
           label="Password:"
@@ -44,9 +54,9 @@ export const Register = () => {
           placeholder="Password"
           name="password"
           required
-          onChange={(e) => setPassword(e.target.value)}
+          onChange={handleChange}
         />
-        <Button variant="signupScreen" onClick={() => navigate("/signin")}>
+        <Button variant="signupScreen" onClick={() => console.log("clicked")}>
           Register
         </Button>
       </form>
