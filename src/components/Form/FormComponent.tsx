@@ -9,7 +9,7 @@ import {
   FormControl,
   TextareaAutosize,
 } from "@mui/material";
-import Button from "../buttonComponent/buttonComponent";
+import Button from "../ButtonComponent/ButtonComponent";
 import "./FormComponent.css";
 
 const FormComponent = () => {
@@ -59,7 +59,7 @@ const FormComponent = () => {
           spacing={2}
           columnSpacing={{ xs: 1, sm: 2, md: 2 }}
           container
-          style={{ marginTop: "2em" }}
+          style={{ marginTop: "3%" }}
         >
           <Grid item xs={12} sm={12} md={12}>
             <Typography
@@ -126,7 +126,7 @@ const FormComponent = () => {
           spacing={2}
           container
           columnSpacing={{ xs: 1, sm: 2, md: 2 }}
-          style={{ marginTop: "0.5em" }}
+          style={{ marginTop: "0em" }}
         >
           <Grid item xs={12} sm={12} md={12}>
             <Typography
@@ -238,15 +238,9 @@ const FormComponent = () => {
           container
           spacing={2}
           columnSpacing={{ xs: 1, sm: 2, md: 2 }}
-          style={{ marginTop: "0.5em" }}
+          style={{ marginTop: "0em" }}
         >
-          <Grid
-            item
-            xs={12}
-            sm={12}
-            md={12}
-            style={{ marginTop: "0em", marginBottom: "0em" }}
-          >
+          <Grid className="responsive" item xs={12} sm={12} md={12}>
             <Typography
               variant="h5"
               className="blackColor"
@@ -255,7 +249,7 @@ const FormComponent = () => {
               Number of meals provided during business trip / Broj obroka
               obezbedjenih tokom trajanja sluzbenog putovanja:
             </Typography>
-          </Grid>
+            </Grid>
           <Grid item xs={12} columnSpacing={{ xs: 1, sm: 2, md: 2 }}>
             <FormControl
               className="whiteColor responsive"
@@ -308,7 +302,7 @@ const FormComponent = () => {
           container
           spacing={2}
           columnSpacing={{ xs: 1, sm: 2, md: 2 }}
-          style={{ marginTop: "0.5em" }}
+          style={{ marginTop: "0em" }}
         >
           <Grid className="responsive" item xs={12} sm={12} md={12}>
             <Typography
@@ -351,7 +345,7 @@ const FormComponent = () => {
           container
           spacing={2}
           columnSpacing={{ xs: 1, sm: 2, md: 2 }}
-          style={{ marginTop: "0.5em", marginBottom: "1em" }}
+          style={{ marginTop: "0em", marginBottom: "1em" }}
         >
           <Grid item xs={12} sm={12} md={12}>
             <Typography
