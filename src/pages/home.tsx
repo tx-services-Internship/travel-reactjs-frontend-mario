@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../components/buttonComponent/buttonComponent";
-import View from "../components/viewComponent/viewComponent";
+import Button from "../components/buttonComponent/ButtonComponent";
+import View from "../components/viewComponent/ViewComponent";
 import "../App.css";
 
 const Home = () => {
@@ -25,9 +25,6 @@ const Home = () => {
       >
         <Button variant="homeScreen" onClick={() => navigate("/Form")}>
           Form
-        </Button>
-        <Button variant="homeScreen" onClick={() => navigate("/FilledForms")}>
-          Filled Forms
         </Button>
       </div>
     </View>
