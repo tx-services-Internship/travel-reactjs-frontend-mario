@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import Button from "../components/ButtonComponent/ButtonComponent";
-import View from "../components/ViewComponent/ViewComponent";
+import Button from "../components/buttonComponent/buttonComponent";
+import View from "../components/viewComponent/viewComponent";
 import "../App.css";
 
 const Home = () => {

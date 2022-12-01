@@ -1,0 +1,16 @@
+.background {
+  align-items: center;
+  width: 30%;
+  border: solid black 1px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+  padding: 2rem;
+  font-size: 2em;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 35%;
+}
+
+.blackColor {
+  font-weight: bold;
+}
