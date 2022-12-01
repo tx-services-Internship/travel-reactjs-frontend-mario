@@ -9,7 +9,7 @@ import {
   FormControl,
   TextareaAutosize,
 } from "@mui/material";
-import Button from "../ButtonComponent/ButtonComponent";
+import Button from "../buttonComponent/buttonComponent";
 import "./FormComponent.css";
 
 const FormComponent = () => {
@@ -249,7 +249,7 @@ const FormComponent = () => {
               Number of meals provided during business trip / Broj obroka
               obezbedjenih tokom trajanja sluzbenog putovanja:
             </Typography>
-            </Grid>
+          </Grid>
           <Grid item xs={12} columnSpacing={{ xs: 1, sm: 2, md: 2 }}>
             <FormControl
               className="whiteColor responsive"

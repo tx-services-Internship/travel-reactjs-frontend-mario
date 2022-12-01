@@ -7,7 +7,11 @@ import {
   TableRow,
   TableCell,
   Paper,
+  Typography,
+  TextField,
+  TextareaAutosize,
 } from "@mui/material";
+import "./Table.css";
 
 type Items = {
   nameAndSurname: string;
@@ -32,60 +36,139 @@ const TableComponent = () => {
   const [items, setItems] = useState<Items>();
 
   useEffect(() => {
-    if(localStorage.getItem("formData"))
-    setItems(JSON.parse(localStorage.getItem("formData") || ""));
+    if (localStorage.getItem("formData"))
+      setItems(JSON.parse(localStorage.getItem("formData") || ""));
   }, []);
 
   console.log("IZ local: ", items);
   return (
-    <TableContainer component={Paper} style={{ width: "90%" }}>
-      <Table aria-label="a dense table" size="medium" stickyHeader>
-        <TableHead>
-          <TableRow>
-            <TableCell style={{ fontWeight: "bold" }}>
-              Name and Surname
-            </TableCell>
-            <TableCell>Department</TableCell>
-            <TableCell>Passport No.</TableCell>
-            <TableCell>ID No.</TableCell>
-            <TableCell>Departure date</TableCell>
-            <TableCell>Departure time</TableCell>
-            <TableCell>Business trip end date</TableCell>
-            <TableCell>Business trip end time</TableCell>
-            <TableCell>Arrival date</TableCell>
-            <TableCell>Country and place</TableCell>
-            <TableCell>Type of Accomodation</TableCell>
-            <TableCell>Breakfast</TableCell>
-            <TableCell>Lunch</TableCell>
-            <TableCell>Dinner</TableCell>
-            <TableCell>Type of transport</TableCell>
-            <TableCell>Vehicle registration number</TableCell>
-            <TableCell>Purpose of travel</TableCell>
-          </TableRow>
-        </TableHead>
-        <TableBody>
-          <TableRow sx={{ "&:last-child td, &:last-child th": { border: 0 } }}>
-            <TableCell>{items?.nameAndSurname}</TableCell>
-            <TableCell>{items?.department}</TableCell>
-            <TableCell>{items?.passport}</TableCell>
-            <TableCell>{items?.idNo}</TableCell>
-            <TableCell>{items?.departureDate}</TableCell>
-            <TableCell>{items?.departureTime}</TableCell>
-            <TableCell>{items?.tripEndDate}</TableCell>
-            <TableCell>{items?.tripEndTime}</TableCell>
-            <TableCell>{items?.arrivalDate}</TableCell>
-            <TableCell>{items?.countryAndPlace}</TableCell>
-            <TableCell>{items?.accomodation}</TableCell>
-            <TableCell>{items?.breakfast}</TableCell>
-            <TableCell>{items?.lunch}</TableCell>
-            <TableCell>{items?.dinner}</TableCell>
-            <TableCell>{items?.transport}</TableCell>
-            <TableCell>{items?.regNum}</TableCell>
-            <TableCell>{items?.purposeTravel}</TableCell>
-          </TableRow>
-        </TableBody>
-      </Table>
-    </TableContainer>
+    <div>
+      <div
+        className="background"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
+        <div>
+          <Typography className="blackColor" variant="h5">
+            Personal data:
+          </Typography>
+        </div>
+        <div>
+          <Typography className="blackColor">Name and surname:</Typography>
+          <TextField variant="standard" value={items?.nameAndSurname} />
+        </div>
+        <div>
+          <Typography className="blackColor">Department:</Typography>
+          <TextField variant="standard" value={items?.department} />
+        </div>
+        <div>
+          <Typography className="blackColor">Passport NO:</Typography>
+          <TextField variant="standard" value={items?.passport} />
+        </div>
+        <div>
+          <Typography className="blackColor">ID NO:</Typography>
+          <TextField variant="standard" value={items?.idNo} />
+        </div>
+      </div>
+
+      <div
+        className="background"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
+        <div>
+          <Typography className="blackColor" variant="h5">
+            Travel info:
+          </Typography>
+        </div>
+        <div>
+          <Typography className="blackColor">Departure date:</Typography>
+          <TextField variant="standard" value={items?.departureDate} />
+        </div>
+        <div>
+          <Typography className="blackColor">Departure time:</Typography>
+          <TextField variant="standard" value={items?.departureTime} />
+        </div>
+        <div>
+          <Typography className="blackColor">
+            Business trip end date:
+          </Typography>
+          <TextField variant="standard" value={items?.tripEndDate} />
+        </div>
+        <div>
+          <Typography className="blackColor">
+            Business trip end time:
+          </Typography>
+          <TextField variant="standard" value={items?.tripEndTime} />
+        </div>
+        <div>
+          <Typography className="blackColor">Arrival date:</Typography>
+          <TextField variant="standard" value={items?.arrivalDate} />
+        </div>
+        <div>
+          <Typography className="blackColor">Country and place:</Typography>
+          <TextField variant="standard" value={items?.countryAndPlace} />
+        </div>
+        <div>
+          <Typography className="blackColor">Type of accomodation:</Typography>
+          <TextField variant="standard" value={items?.accomodation} />
+        </div>
+      </div>
+
+      <div
+        className="background"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
+        <div>
+          <Typography className="blackColor" variant="h5">
+            Number of meals provided during business trip:
+          </Typography>
+        </div>
+        <div>
+          <Typography className="blackColor">Breakfast:</Typography>
+          <TextField variant="standard" value={items?.breakfast} />
+        </div>
+        <div>
+          <Typography className="blackColor">Lunch:</Typography>
+          <TextField variant="standard" value={items?.lunch} />
+        </div>
+        <div>
+          <Typography className="blackColor">Dinner:</Typography>
+          <TextField variant="standard" value={items?.dinner} />
+        </div>
+      </div>
+
+      <div
+        className="background"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
+        <div>
+          <Typography className="blackColor" variant="h5">
+            Transport details:
+          </Typography>
+        </div>
+        <div>
+          <Typography className="blackColor">Type of transport:</Typography>
+          <TextField variant="standard" value={items?.transport} />
+        </div>
+        <div>
+          <Typography className="blackColor">Vehicle reg. number:</Typography>
+          <TextField variant="standard" value={items?.regNum} />
+        </div>
+      </div>
+
+      <div
+        className="background"
+        style={{ display: "flex", flexDirection: "column" }}
+      >
+        <div>
+          <Typography className="blackColor" variant="h5">
+            Purpose of travel:
+          </Typography>
+        </div>
+        <div>
+          <TextareaAutosize value={items?.purposeTravel} />
+        </div>
+      </div>
+    </div>
   );
 };
 

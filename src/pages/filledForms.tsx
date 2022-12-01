@@ -1,13 +1,12 @@
 import React from "react";
-import View from "../components/ViewComponent/ViewComponent";
-import TableComponent from "../components/Table/Table";
+import View from "../components/viewComponent/viewComponent";
+import TableComponent from "../components/table/Table";
+import { Grid, TextField, Typography } from "@mui/material";
+
 const FilledForms = () => {
   return (
     <div>
-      <View>
-        <h1>Filled Form</h1>
-        <TableComponent />
-      </View>
+      <TableComponent />
     </div>
   );
 };
