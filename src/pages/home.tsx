@@ -23,10 +23,10 @@ const Home = () => {
           gap: "1em",
         }}
       >
-        <Button variant="homeScreen" onClick={() => navigate("/form")}>
+        <Button variant="homeScreen" onClick={() => navigate("/Form")}>
           Form
         </Button>
-        <Button variant="homeScreen" onClick={() => navigate("/filledForms")}>
+        <Button variant="homeScreen" onClick={() => navigate("/FilledForms")}>
           Filled Forms
         </Button>
       </div>
