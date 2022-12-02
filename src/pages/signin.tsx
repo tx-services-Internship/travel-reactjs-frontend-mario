@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Button from "../components/buttonComponent/buttonComponent";
-import View from "../components/viewComponent/viewComponent";
-import Input from "../components/inputComponent/inputComponent";
+import Button from "../components/buttonComponent/ButtonComponent";
+import View from "../components/viewComponent/ViewComponent";
+import Input from "../components/inputComponent/InputComponent";
 
 export const SignInPage = () => {
   const [data, setData] = useState({

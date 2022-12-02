@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Grid,
   TextField,
@@ -9,7 +10,7 @@ import {
   FormControl,
   TextareaAutosize,
 } from "@mui/material";
-import Button from "../buttonComponent/buttonComponent";
+import Button from "../buttonComponent/ButtonComponent";
 import "./FormComponent.css";
 
 const FormComponent = () => {
@@ -48,6 +49,9 @@ const FormComponent = () => {
   };
 
   const numbers = Array.from({ length: 31 }, (_, i) => i + 1);
+
+  const navigate = useNavigate();
+
   return (
     <form onSubmit={handleSubmit}>
       <Grid
@@ -369,8 +373,8 @@ const FormComponent = () => {
           </Grid>
         </Grid>
       </Grid>
-      <Button variant="formScreen" onClick={() => console.log("clicked")}>
-        Submit
+      <Button variant="formScreen" onClick={() => navigate("/FilledForms")}>
+          Filled Forms
       </Button>
     </form>
   );

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Button from "../components/buttonComponent/buttonComponent";
-import Input from "../components/inputComponent/inputComponent";
-import View from "../components/viewComponent/viewComponent";
+import Button from "../components/buttonComponent/ButtonComponent";
+import Input from "../components/inputComponent/InputComponent";
+import View from "../components/viewComponent/ViewComponent";
 
 export const Register = () => {
   const [data, setData] = useState({
